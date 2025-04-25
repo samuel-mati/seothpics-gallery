@@ -45,7 +45,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
             <Button 
               variant="ghost" 
               size="sm" 
-              className="text-teal-500 hover:text-teal-600 flex items-center gap-2"
+              className="text-teal-500 hover:bg-teal-500 hover:text-white flex items-center gap-2"
             >
               <Coffee size={16} />
               <span>Buy Me a Coffee</span>
@@ -61,7 +61,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
             ) : (
               <Button 
                 variant="outline" 
-                className="border-teal-500 text-teal-500 hover:bg-teal-50"
+                className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white"
               >
                 Join
               </Button>
@@ -107,7 +107,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="justify-start text-teal-500 hover:text-teal-600 flex items-center gap-2"
+                className="justify-start text-teal-500 hover:bg-teal-500 hover:text-white flex items-center gap-2"
               >
                 <Coffee size={16} />
                 <span>Buy Me a Coffee</span>
@@ -123,7 +123,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
               ) : (
                 <Button 
                   variant="outline" 
-                  className="border-teal-500 text-teal-500 hover:bg-teal-50"
+                  className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white"
                 >
                   Join
                 </Button>
