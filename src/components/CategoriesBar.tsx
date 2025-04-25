@@ -45,7 +45,7 @@ const CategoriesBar = ({
           {/* Categories list */}
           <div 
             ref={scrollRef}
-            className="flex-1 overflow-x-auto scrollbar-hide px-2 flex space-x-2 py-1"
+            className="flex-1 overflow-x-auto scrollbar-hide px-2 flex space-x-2 py-1 no-scrollbar"
             style={{ scrollBehavior: "smooth" }}
           >
             <Button
@@ -55,7 +55,7 @@ const CategoriesBar = ({
               className={`rounded-full flex-shrink-0 ${
                 selectedCategory === "all" 
                   ? "bg-teal-600 hover:bg-teal-700 text-white" 
-                  : "hover:bg-grey-100"
+                  : "bg-grey-100 text-grey-600 hover:bg-grey-200"
               }`}
             >
               All
@@ -70,7 +70,7 @@ const CategoriesBar = ({
                 className={`rounded-full flex-shrink-0 ${
                   selectedCategory === category 
                     ? "bg-teal-600 hover:bg-teal-700 text-white" 
-                    : "hover:bg-grey-100"
+                    : "bg-grey-100 text-grey-600 hover:bg-grey-200"
                 }`}
               >
                 {category}
