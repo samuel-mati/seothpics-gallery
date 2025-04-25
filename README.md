@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# Welcome to your Seothpics Gallery Website ✨
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/1d8967f1-0146-403c-b909-5b6929e5cc4d
+**URL**: [https://github.com/samuel-mati/seothpics-gallery-grid-ui](https://github.com/samuel-mati/seothpics-gallery-grid-ui)
 
-## How can I edit this code?
+Seothpics is a modern, responsive gallery platform designed to help users view, search, like, download, and share high-quality images across various categories. Built for performance, accessibility, and visual delight — it’s your creative hub for stunning visuals.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🔧 How to Edit This Project
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1d8967f1-0146-403c-b909-5b6929e5cc4d) and start prompting.
+There are several ways you can work on this application:
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🧠 Use Lovable (Optional)
 
-**Use your preferred IDE**
+Use [Lovable](https://lovable.dev) to make live changes via prompts. Any edits made will be automatically committed to your GitHub repo if connected.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 💻 Use Your Preferred IDE (Locally)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To develop and run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone https://github.com/samuel-mati/seothpics-gallery-grid-ui.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd seothpics-gallery-grid-ui
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+✏️ Edit Files Directly on GitHub
+Navigate to the file(s) you want to edit.
 
-**Use GitHub Codespaces**
+Click the pencil icon (🖉) in the top right.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Make your changes and commit.
 
-## What technologies are used for this project?
+🖥️ Use GitHub Codespaces
+Go to the repo’s main page.
 
-This project is built with:
+Click the green Code button.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Select the Codespaces tab.
 
-## How can I deploy this project?
+Click New codespace.
 
-Simply open [Lovable](https://lovable.dev/projects/1d8967f1-0146-403c-b909-5b6929e5cc4d) and click on Share -> Publish.
+Make edits directly and commit them.
 
-## Can I connect a custom domain to my Lovable project?
+🧱 Technologies Used
+This project is built using:
 
-Yes, you can!
+Vite
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+React + TypeScript
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Tailwind CSS
+
+shadcn/ui
+
+🚀 Deployment
+You can host your site using any modern frontend hosting provider like:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+DigitalOcean
+
+Simply connect your GitHub repository and deploy from the main branch.
