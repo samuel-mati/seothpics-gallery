@@ -22,7 +22,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
-              <h1 className="text-xl font-bold text-teal-600">Seothpics</h1>
+              <h1 className="text-xl font-bold text-teal-500">Seothpics</h1>
             </a>
           </div>
 
@@ -42,17 +42,27 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
 
           {/* Desktop Nav Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="text-teal-600 hover:text-teal-700 flex items-center gap-2">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-teal-500 hover:text-teal-600 flex items-center gap-2"
+            >
               <Coffee size={16} />
               <span>Buy Me a Coffee</span>
             </Button>
             
             {isLoggedIn ? (
-              <Button variant="default" className="bg-teal-600 hover:bg-teal-700 text-white">
+              <Button 
+                variant="default" 
+                className="bg-teal-500 hover:bg-teal-600 text-white"
+              >
                 Submit Image
               </Button>
             ) : (
-              <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+              <Button 
+                variant="outline" 
+                className="border-teal-500 text-teal-500 hover:bg-teal-50"
+              >
                 Join
               </Button>
             )}
@@ -79,7 +89,7 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
 
       {/* Mobile menu, show/hide based on menu state */}
       {mobileMenuOpen && (
-        <div className="md:hidden" id="mobile-menu">
+        <div className="md:hidden bg-grey-100" id="mobile-menu">
           <div className="px-4 py-3 space-y-3">
             {/* Mobile Search */}
             <div className="relative">
@@ -94,17 +104,27 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
             </div>
             
             <div className="flex flex-col space-y-2">
-              <Button variant="ghost" size="sm" className="justify-start text-teal-600 hover:text-teal-700 flex items-center gap-2">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="justify-start text-teal-500 hover:text-teal-600 flex items-center gap-2"
+              >
                 <Coffee size={16} />
                 <span>Buy Me a Coffee</span>
               </Button>
               
               {isLoggedIn ? (
-                <Button variant="default" className="bg-teal-600 hover:bg-teal-700 text-white">
+                <Button 
+                  variant="default" 
+                  className="bg-teal-500 hover:bg-teal-600 text-white"
+                >
                   Submit Image
                 </Button>
               ) : (
-                <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+                <Button 
+                  variant="outline" 
+                  className="border-teal-500 text-teal-500 hover:bg-teal-50"
+                >
                   Join
                 </Button>
               )}

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-teal-600 to-teal-700 text-white py-8">
+    <div className="bg-grey-100 text-foreground py-8">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
           Stunning Free Images for Your Projects
@@ -12,9 +12,9 @@ const HeroBanner = () => {
           Over thousands of high-quality stock photos free to use for your personal and commercial projects
         </p>
         <Button 
-          variant="outline" 
+          variant="default" 
           size="lg" 
-          className="bg-white text-teal-700 hover:bg-grey-100 border-white"
+          className="bg-teal-500 text-white hover:bg-teal-600"
         >
           Start Exploring
         </Button>
