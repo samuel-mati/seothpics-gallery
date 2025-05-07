@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import CategoriesBar from "@/components/CategoriesBar";
 import HeroBanner from "@/components/HeroBanner";
 import ImageGrid from "@/components/ImageGrid";
+import Footer from "@/components/Footer";
 import { mockImages, getCategories } from "@/data/mockImages";
 
 const Index = () => {
@@ -17,7 +18,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-grey-100">
+    <div className="min-h-screen bg-grey-100 flex flex-col">
       <Navbar isLoggedIn={isLoggedIn} />
       <HeroBanner />
       <CategoriesBar 
@@ -29,6 +30,7 @@ const Index = () => {
         images={mockImages} 
         selectedCategory={selectedCategory} 
       />
+      <Footer />
     </div>
   );
 };

@@ -55,7 +55,7 @@ const CategoriesBar = ({
               className={`rounded-full flex-shrink-0 ${
                 selectedCategory === "all" 
                   ? "bg-teal-600 hover:bg-teal-700 text-white" 
-                  : "bg-grey-100 text-grey-600 hover:bg-grey-200"
+                  : "bg-grey-100 text-grey-600 hover:bg-grey-200 hover:text-grey-600"
               }`}
             >
               All
@@ -70,7 +70,7 @@ const CategoriesBar = ({
                 className={`rounded-full flex-shrink-0 ${
                   selectedCategory === category 
                     ? "bg-teal-600 hover:bg-teal-700 text-white" 
-                    : "bg-grey-100 text-grey-600 hover:bg-grey-200"
+                    : "bg-grey-100 text-grey-600 hover:bg-grey-200 hover:text-grey-600"
                 }`}
               >
                 {category}
