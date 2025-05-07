@@ -93,15 +93,12 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* Bottom section */}
+        {/* Bottom section - Removed API, sitemap, FAQ links */}
         <div className="border-t border-grey-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-grey-600 mb-4 md:mb-0">© {new Date().getFullYear()} Seothpics. All rights reserved.</p>
             <div className="flex space-x-6">
-              <a href="#" className="text-grey-600 hover:text-teal-600">FAQ</a>
               <a href="#" className="text-grey-600 hover:text-teal-600">Support</a>
-              <a href="#" className="text-grey-600 hover:text-teal-600">API</a>
-              <a href="#" className="text-grey-600 hover:text-teal-600">Sitemap</a>
             </div>
           </div>
         </div>
