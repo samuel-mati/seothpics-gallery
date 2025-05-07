@@ -10,6 +10,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import License from "./pages/License";
 import Copyright from "./pages/Copyright";
+import Login from "./pages/Login";
+import SubmitImage from "./pages/SubmitImage";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/license" element={<License />} />
           <Route path="/copyright" element={<Copyright />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/submit-image" element={<SubmitImage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

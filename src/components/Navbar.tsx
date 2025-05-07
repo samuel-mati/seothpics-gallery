@@ -1,18 +1,52 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Menu, X, Coffee } from "lucide-react";
+import { Search, Menu, X, Coffee, LogIn, Image as ImageIcon, User } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface NavbarProps {
   isLoggedIn?: boolean;
 }
 
-const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
+const Navbar = ({ isLoggedIn: propIsLoggedIn = false }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(propIsLoggedIn);
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  // Check localStorage on component mount and when propIsLoggedIn changes
+  useEffect(() => {
+    const storedLoginState = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(storedLoginState || propIsLoggedIn);
+  }, [propIsLoggedIn]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
+  const handleSubmitImageClick = () => {
+    if (isLoggedIn) {
+      navigate("/submit-image");
+    } else {
+      navigate("/login");
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userEmail");
+    setIsLoggedIn(false);
+    
+    toast({
+      title: "Logged out",
+      description: "You have been successfully logged out.",
+    });
   };
 
   return (
@@ -21,9 +55,9 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <h1 className="text-xl font-bold text-teal-500">Seothpics</h1>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Search Bar */}
@@ -52,18 +86,31 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
             </Button>
             
             {isLoggedIn ? (
-              <Button 
-                variant="default" 
-                className="bg-teal-500 hover:bg-teal-600 text-white"
-              >
-                Submit Image
-              </Button>
+              <div className="flex items-center space-x-2">
+                <Button 
+                  variant="default" 
+                  className="bg-teal-500 hover:bg-teal-600 text-white flex items-center gap-2"
+                  onClick={handleSubmitImageClick}
+                >
+                  <ImageIcon size={16} />
+                  <span>Submit Image</span>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </Button>
+              </div>
             ) : (
               <Button 
                 variant="outline" 
-                className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white"
+                className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white flex items-center gap-2"
+                onClick={handleLoginClick}
               >
-                Join
+                <LogIn size={16} />
+                <span>Join</span>
               </Button>
             )}
           </div>
@@ -114,18 +161,31 @@ const Navbar = ({ isLoggedIn = false }: NavbarProps) => {
               </Button>
               
               {isLoggedIn ? (
-                <Button 
-                  variant="default" 
-                  className="bg-teal-500 hover:bg-teal-600 text-white"
-                >
-                  Submit Image
-                </Button>
+                <>
+                  <Button 
+                    variant="default" 
+                    className="bg-teal-500 hover:bg-teal-600 text-white justify-start flex items-center gap-2"
+                    onClick={handleSubmitImageClick}
+                  >
+                    <ImageIcon size={16} />
+                    <span>Submit Image</span>
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white justify-start"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Button>
+                </>
               ) : (
                 <Button 
                   variant="outline" 
-                  className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white"
+                  className="border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white justify-start flex items-center gap-2"
+                  onClick={handleLoginClick}
                 >
-                  Join
+                  <LogIn size={16} />
+                  <span>Join</span>
                 </Button>
               )}
             </div>
